@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply bg-ink-950 text-paper-100 font-body antialiased;
+  }
+
+  * {
+    @apply border-ink-700;
+  }
+
+  ::selection {
+    @apply bg-amber-500/30 text-paper-100;
+  }
+
+  :focus-visible {
+    outline: 2px solid #E8A33D;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .ticket-edge {
+    background-image: radial-gradient(circle at 6px 0, transparent 6px, currentColor 6px);
+    background-size: 16px 12px;
+    background-repeat: repeat-x;
+    background-position: bottom;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-ink-600 rounded-full;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+}
